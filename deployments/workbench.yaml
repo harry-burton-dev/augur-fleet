@@ -3,6 +3,7 @@ schema: augur.deployment/v1
 name: workbench
 ring: dev
 release: follow
+secrets: ../secrets/workbench.sops.env
 host:
   ssh: local
   dir: /opt/stacks/im-platform-deploy
