@@ -1,0 +1,29 @@
+# Each AUGUR deployment, for the company Backstage portal (backstage-hb reads this file at its
+# AUGUR_DEPLOYMENTS_URL, hourly). metadata.name is the server's DEPLOYMENT_ID; augur.dev/ring and augur.dev/url
+# match its file in deployments/. augur.dev/report-key is copied from its Deployment page (Reporting).
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: augur-workbench
+  title: AUGUR workbench
+  description: Harry's dev workbench on the MSI server. Takes AUGUR dev builds by itself.
+  annotations:
+    augur.dev/ring: dev
+    augur.dev/url: https://platform.tailfb071b.ts.net
+spec:
+  type: augur-deployment
+  owner: group:default/augur-core
+  system: augur-platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: augur-demo
+  title: AUGUR demo
+  description: The demonstration deployment, once the foundations are complete. Not running yet.
+  annotations:
+    augur.dev/ring: production
+spec:
+  type: augur-deployment
+  owner: group:default/augur-core
+  system: augur-platform
