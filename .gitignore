@@ -1,0 +1,3 @@
+# Decrypted secrets never land here.
+*.env
+!*.sops.env

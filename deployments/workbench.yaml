@@ -1,0 +1,18 @@
+# Harry's dev bench (the MSI), as augurctl's first real run found it on 14 Nov 2026: plans clean.
+schema: augur.deployment/v1
+name: workbench
+ring: dev
+release: follow
+host:
+  ssh: local
+  dir: /opt/stacks/im-platform-deploy
+settings:
+  COMPOSE_PROJECT_NAME: im-platform
+  PLATFORM_URL: https://platform.tailfb071b.ts.net
+  TS_HOSTNAME: platform
+  APP_PUBLISHERS: harry-burton-dev/augur-folio
+  GITHUB_READ_USER: harry-burton-dev
+  COMPOSE_PROFILES: updater
+apps:
+  - id: folio
+    version: 0.9.0
