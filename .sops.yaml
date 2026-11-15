@@ -1,0 +1,7 @@
+# Who can open each deployment's secrets file (secrets/<name>.sops.env): the age public keys below.
+# augurctl init and sops encrypt for them; the matching private key decrypts.
+# Harry's key: the private half is in %APPDATA%\sops\age\keys.txt on his Surface. To add a key, list it
+# here and run `sops updatekeys secrets/<name>.sops.env` for each file.
+creation_rules:
+  - path_regex: secrets/[^/]+\.sops\.env$
+    age: age1v4gmenm2728ayr03xynnrzxugj9ftljmyuaepazj5fmmxeq4eakqvczzjf
